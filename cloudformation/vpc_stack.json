@@ -350,6 +350,7 @@
 			"IpAddressType" : "ipv4",
 			"Name" : "container-lab-alb",
 			"Scheme" : "internet-facing",
+			"SecurityGroups" : [{"Ref" : "WebFacingSecurityGroup"}],
 			"SubnetMappings" : [ {"SubnetId" : {"Ref" : "PublicSubnet1"}}, 
 				{"SubnetId" : {"Ref" : "PublicSubnet2"}} ],
 			"Type" : "application"
