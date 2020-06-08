@@ -342,8 +342,19 @@
 			"CidrIp" : "0.0.0.0/0"
 		 }]
 		}
-	 }
+	 },
 
+	 "LoadBalancer" : {
+		"Type" : "AWS::ElasticLoadBalancingV2::LoadBalancer",
+		"Properties" : {
+			"IpAddressType" : "ipv4",
+			"Name" : "container-lab-alb",
+			"Scheme" : "internet-facing",
+			"SubnetMappings" : [ {"SubnetId" : {"Ref" : "PublicSubnet1"}}, 
+				{"SubnetId" : {"Ref" : "PublicSubnet2"}} ],
+			"Type" : "application"
+		  }
+	  }
 	},
 	"Outputs" : {
 		"URL" : {

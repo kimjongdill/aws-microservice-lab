@@ -4,8 +4,8 @@ aws cloudformation delete-stack --stack-name container-lab
 
 aws ecr delete-repository \
     --force \
-    --repository-name public-service
+    --repository-name frontend-service
 
 aws ecr delete-repository \
      --force \
-     --repository-name private-service 
+     --repository-name backend-service 
