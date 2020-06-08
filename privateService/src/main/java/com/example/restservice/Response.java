@@ -1,17 +1,17 @@
 package com.example.restservice;
 
-public class Greeting {
+public class Response {
 
-	private final long id;
+	private final String ip;
 	private final String content;
 
-	public Greeting(long id, String content) {
-		this.id = id;
+	public Response(String ip, String content) {
+		this.ip = ip;
 		this.content = content;
 	}
 
-	public long getId() {
-		return id;
+	public String getId() {
+		return ip;
 	}
 
 	public String getContent() {
