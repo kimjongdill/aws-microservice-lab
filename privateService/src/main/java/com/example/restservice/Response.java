@@ -2,16 +2,16 @@ package com.example.restservice;
 
 public class Response {
 
-	private final String ip;
+	private final String id;
 	private final String content;
 
-	public Response(String ip, String content) {
-		this.ip = ip;
+	public Response(String id, String content) {
+		this.id = id;
 		this.content = content;
 	}
 
 	public String getId() {
-		return ip;
+		return id;
 	}
 
 	public String getContent() {
