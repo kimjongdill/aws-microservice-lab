@@ -1,0 +1,33 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: web-app-2
+  region: us-east-2
+
+iam:
+  withOIDC: true
+  serviceAccounts:
+  - metadata:
+      name: alb-ingress-controller
+      namespace: kube-system
+    attachPolicyARNs:
+    - "arn:aws:iam::534585399619:policy/ALBIngressControllerIAMPolicy"
+
+vpc:
+  subnets:
+    private:
+      us-east-2a: { id: subnet-042dd2d8e5118627c }
+      us-east-2b: { id: subnet-01f718a1b6ab3246c }
+    public:
+      us-east-2a: { id: subnet-0b7780131265f1fd7 }
+      us-east-2b: { id: subnet-0be938b38ce98c885 }
+
+fargateProfiles:
+  - name: system
+    selectors:
+      - namespace: default
+      - namespace: kube-system
+  - name: local
+    selectors:
+      - namespace: local

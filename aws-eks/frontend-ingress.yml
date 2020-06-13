@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: "frontend-ingress"
+  namespace: "local"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip 
+    # alb.ingress.kubernetes.io/subnets: subnet-042dd2d8e5118627c, subnet-01f718a1b6ab3246c, subnet-0b7780131265f1fd7, subnet-0be938b38ce98c885
+    alb.ingress.kubernetes.io/healthcheck-path: /health
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: "frontend"
+          servicePort: 8080

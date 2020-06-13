@@ -37,7 +37,9 @@
 		"VpcId" : { "Ref" : "VPC" },
 		"CidrBlock" : "10.0.1.0/24",
 		"AvailabilityZone" : {"Ref" : "AvailabilityZone1"},
-		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ]
+		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} },
+					{"Key" : "kubernetes.io/cluster/web-app", "Value" : "shared"},
+					{"Key" : "kubernetes.io/role/elb", "Value" : "1"} ]
 	    }
 	},
 	
@@ -47,7 +49,8 @@
 		"VpcId" : { "Ref" : "VPC" },
 		"AvailabilityZone" : {"Ref" : "AvailabilityZone1"},
 		"CidrBlock" : "10.0.2.0/24",
-		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ]
+		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} },
+			{"Key" : "kubernetes.io/cluster/web-app", "Value" : "shared"} ]
 	    }
 	},
 	
@@ -57,7 +60,9 @@
 		"VpcId" : { "Ref" : "VPC" },
 		"CidrBlock" : "10.0.3.0/24",
 		"AvailabilityZone" : {"Ref" : "AvailabilityZone2"},
-		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ]
+		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} },
+			{"Key" : "kubernetes.io/cluster/web-app", "Value" : "shared"},
+			{"Key" : "kubernetes.io/role/elb", "Value" : "1"} ]
 	    }
 	},
 	
@@ -67,7 +72,8 @@
 		"VpcId" : { "Ref" : "VPC" },
 		"AvailabilityZone" : {"Ref" : "AvailabilityZone2"},
 		"CidrBlock" : "10.0.4.0/24",
-		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ]
+		"Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} },
+			{"Key" : "kubernetes.io/cluster/web-app", "Value" : "shared"} ]
 	    }
 	},
 
