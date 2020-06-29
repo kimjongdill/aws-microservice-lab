@@ -42,7 +42,7 @@ An understanding of some ECS concepts is required before we jump into the tutori
 
 ## Getting Started
 
-[If you haven't already, click here for instructions on how to set up your AWS environment.](../environment/README.MD)
+[If you haven't already, click here for instructions on how to set up your AWS environment.](../app-setup/README.MD)
 
 ## Procedure
 

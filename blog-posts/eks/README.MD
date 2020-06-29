@@ -34,7 +34,7 @@ The post details how I configured my K8s cluster to run the [sample microservice
 
 ## Getting Started
 
-* [Set up the sample environment](../sample-application/readme.md)
+* [Set up the sample environment](../app-setup/README.MD)
 * [Download eksctl](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
 * [Download kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
