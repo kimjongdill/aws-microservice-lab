@@ -20,14 +20,19 @@ ECS is a managed container orchestration system provided by AWS. ELI5 - ECS is a
 A few desirable features of ECS include
 
 * No additonal charge for ECS beyond the amount paid for compute resources. 
+
 * Control of the ECS cluster can be done through a web-based GUI or the command line interface. 
+
 * Integration with Identity and Access Management and other AWS services. 
 
 An understanding of some ECS concepts is required before we jump into the tutorial. 
 
 * **Task Definition** is the combination of a container image and its runtime parameters. 
+
 * **Task** is a running instance of a task definition
+
 * **Service** runs and maintains a specified number of tasks
+
 * **Cluster** A logical grouping of tasks and services combined with a compute resources called a service provider. 
 
 
