@@ -4,6 +4,8 @@ This post describes a sample microservice based web application and a cloud stac
 
 Follow the instructions in this post before starting either of those tutorials. 
 
+```git clone https://github.com/nvisia/gdill/aws_microservice_lab```
+
 ## The Application
 We've put together a simple microservice based application for demonstrating the features of each container orchestration system. The app consists of two microservices. The first service is exposed to the internet where it accepts requests and passed them on to the backend service. Therefore, both services have the same API but perform different tasks. We have exposed four command in our API, health, greeting, crash, and infinite. 
 
